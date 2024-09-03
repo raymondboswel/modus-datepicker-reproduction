@@ -42,7 +42,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@lit/reactive-element": "^2.0.4",
-    "@trimble-oss/modus-web-components": "file:../../trimble/modus-web-components/stencil-workspace/trimble-oss-modus-web-components-0.1.53.tgz",
+    "@trimble-oss/modus-web-components": "^0.37.0",
     "@types/mocha": "^10.0.7",
     "lit": "^3.2.0",
     "lit-element": "^4.1.0",
