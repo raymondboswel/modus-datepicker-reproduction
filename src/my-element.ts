@@ -6,8 +6,12 @@
 
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import {defineCustomElements} from '@trimble-oss/modus-web-components/loader';
+
+defineCustomElements();
 
 /**
+
  * An example element.
  *
  * @fires count-changed - Indicates when the count changes
@@ -16,6 +20,14 @@ import {customElement, property} from 'lit/decorators.js';
  */
 @customElement('my-element')
 export class MyElement extends LitElement {
+  // UNCOMMENT to disable shadowDOM, which makes the calendar work
+  // override createRenderRoot() {
+  //   /**
+  //    * Render template without shadow DOM. Note that shadow DOM features like
+  //    * encapsulated CSS and slots are unavailable.
+  //    */
+  //   return this;
+  // }
   static override styles = css`
     :host {
       display: block;
@@ -40,6 +52,10 @@ export class MyElement extends LitElement {
   override render() {
     return html`
       <h1>${this.sayHello(this.name)}!</h1>
+      <modus-date-picker>
+        <modus-date-input type="single"></modus-date-input>
+      </modus-date-picker>
+
       <button @click=${this._onClick} part="button">
         Click Count: ${this.count}
       </button>

@@ -41,7 +41,12 @@
   "author": "Google LLC",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "lit": "^3.2.0"
+    "@lit/reactive-element": "^2.0.4",
+    "@trimble-oss/modus-web-components": "file:../../trimble/modus-web-components/stencil-workspace/trimble-oss-modus-web-components-0.1.53.tgz",
+    "@types/mocha": "^10.0.7",
+    "lit": "^3.2.0",
+    "lit-element": "^4.1.0",
+    "lit-html": "^3.2.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
